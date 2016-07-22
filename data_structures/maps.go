@@ -1,9 +1,20 @@
 package data_structures
 
 func findPeopleWithCommonInterest(data map[string][]string, interest string) []string {
-	return nil
+	 result :=[]string{}
+	 for key,value := range data{
+		 if contains(value,interest){
+			 result = append(result,key)
+		 }
+	 }
+	return result
 }
 
 func contains(src []string, elem string) bool {
+	for _,intr :=range src{
+		if intr==elem{
+		return true
+		}
+}
 	return false
 }
